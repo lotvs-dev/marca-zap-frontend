@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router'
+import { Logo } from '@/components/Logo'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -9,9 +10,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold bg-linear-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
-              MarcaZap
-            </span>
+            <Logo width={130} height={34} />
           </div>
 
           {/* Links */}

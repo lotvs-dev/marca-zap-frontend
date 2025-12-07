@@ -3,6 +3,7 @@ import { Link } from '@tanstack/react-router'
 import { Calendar, Settings, LayoutDashboard, LogOut } from 'lucide-react'
 import { useAuth } from '@/hooks/use-auth'
 import { Button } from '@/components/ui/button'
+import { Logo } from '@/components/Logo'
 
 export function DashboardLayout({ children }: { children: ReactNode }) {
   const { user, logout } = useAuth()
@@ -14,7 +15,7 @@ export function DashboardLayout({ children }: { children: ReactNode }) {
         <div className="flex min-h-0 flex-1 flex-col border-r border-gray-200 bg-white">
           <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
             <div className="flex flex-shrink-0 items-center px-4">
-              <h1 className="text-xl font-bold text-gray-900">MarcaZap</h1>
+              <Logo width={130} height={34} />
             </div>
             <nav className="mt-8 flex-1 space-y-1 px-2">
               <NavLink to="/dashboard" icon={LayoutDashboard}>

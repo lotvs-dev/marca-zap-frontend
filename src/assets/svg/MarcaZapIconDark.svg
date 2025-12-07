@@ -1,0 +1,26 @@
+<svg width="512" height="512" viewBox="64 64 384 384" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="zapGradient" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1C6A4F" />
+      <stop offset="100%" stop-color="#0E4F3B" />
+    </linearGradient>
+  </defs>
+
+  <path d="M256 64C149.97 64 64 149.97 64 256C64 294.6 74.8 330.6 93.6 361.6L70 448L160.8 423.6C188.8 439.4 221.4 448 256 448C362.03 448 448 362.03 448 256C448 149.97 362.03 64 256 64Z" 
+        fill="url(#zapGradient)"/>
+
+  <g transform="translate(146, 146) scale(0.85)">
+    <rect x="20" y="40" width="220" height="180" rx="25" fill="#2D2D2D" />
+    
+    <path d="M60 40H200" stroke="#B6B6B6" stroke-width="4" stroke-linecap="round"/>
+    
+    <path d="M70 20V60" stroke="#128C7E" stroke-width="14" stroke-linecap="round"/>
+    <path d="M190 20V60" stroke="#128C7E" stroke-width="14" stroke-linecap="round"/>
+
+    <path d="M75 130 L115 170 L195 90" 
+      stroke="#25D366" 
+      stroke-width="24" 
+      stroke-linecap="round" 
+      stroke-linejoin="round"/>
+  </g>
+</svg>
