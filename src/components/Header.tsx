@@ -8,14 +8,14 @@ import { Logo } from '@/components/Logo'
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
   }
 
   const navLinks = [
@@ -51,7 +51,7 @@ export default function Header() {
                 className="p-2 rounded-lg hover:bg-emerald-100 dark:hover:bg-zinc-800 transition-colors"
                 aria-label="Toggle theme"
               >
-                {mounted && theme === 'dark' ? (
+                {mounted && resolvedTheme === 'dark' ? (
                   <Sun className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
                 ) : (
                   <Moon className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
@@ -71,7 +71,7 @@ export default function Header() {
                 className="p-2 rounded-lg hover:bg-emerald-100 dark:hover:bg-zinc-800 transition-colors"
                 aria-label="Toggle theme"
               >
-                {mounted && theme === 'dark' ? (
+                {mounted && resolvedTheme === 'dark' ? (
                   <Sun className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
                 ) : (
                   <Moon className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
