@@ -1,0 +1,89 @@
+import { CheckCircle2, Clock, Smartphone } from 'lucide-react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { useInView } from '@/hooks/useInView'
+
+interface ValuePillar {
+  icon: React.ElementType
+  title: string
+  description: string
+  metric: string
+}
+
+const pillars: ValuePillar[] = [
+  {
+    icon: CheckCircle2,
+    title: 'Agendamento Automático',
+    description: 'Cliente manda "Quero agendar" no WhatsApp. Sistema responde com horários disponíveis e agenda sozinho.',
+    metric: '90% menos mensagens',
+  },
+  {
+    icon: Clock,
+    title: 'Lembretes Inteligentes',
+    description: 'Envia lembrete automático 24h e 2h antes do agendamento. Reduz faltas drasticamente.',
+    metric: '67% menos no-shows',
+  },
+  {
+    icon: Smartphone,
+    title: 'Zero Fricção',
+    description: 'Seu cliente não instala nada. Só conversa no app que já usa todo dia. Sem Calendly, sem link externo.',
+    metric: '100% WhatsApp nativo',
+  },
+]
+
+export function ValueProposition() {
+  return (
+    <section id="recursos" className="py-20 px-4 bg-zinc-50 dark:bg-zinc-900/50">
+      <div className="container mx-auto max-w-7xl">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-4">
+            Por que profissionais escolhem MarcaZap
+          </h2>
+          <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+            Automatize agendamentos, reduza faltas e foque no que importa: seu trabalho.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {pillars.map((pillar, index) => (
+            <ValueCard key={pillar.title} pillar={pillar} delay={index * 100} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function ValueCard({ pillar, delay }: { pillar: ValuePillar; delay: number }) {
+  const [ref, isInView] = useInView<HTMLDivElement>({ threshold: 0.2 })
+  const Icon = pillar.icon
+
+  return (
+    <div
+      ref={ref}
+      className="transition-all duration-700"
+      style={{
+        opacity: isInView ? 1 : 0,
+        transform: isInView ? 'translateY(0)' : 'translateY(32px)',
+        transitionDelay: `${delay}ms`,
+      }}
+    >
+      <Card className="h-full bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/10">
+        <CardHeader>
+          <div className="w-14 h-14 rounded-xl bg-linear-to-br from-emerald-500 to-emerald-600 flex items-center justify-center mb-4 shadow-lg shadow-emerald-500/30">
+            <Icon className="w-7 h-7 text-white" />
+          </div>
+          <CardTitle className="text-xl">{pillar.title}</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <CardDescription className="text-base text-zinc-600 dark:text-zinc-400">
+            {pillar.description}
+          </CardDescription>
+          <Badge className="bg-emerald-100 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 border-emerald-200 dark:border-emerald-800">
+            {pillar.metric}
+          </Badge>
+        </CardContent>
+      </Card>
+    </div>
+  )
+}
