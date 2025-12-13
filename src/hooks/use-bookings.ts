@@ -1,6 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
+import type { Booking, CreateBookingData, BookingStatus } from '@/types'
+
 import { api } from '@/lib/api'
-import { Booking, CreateBookingData, BookingStatus } from '@/types'
 
 export function useBookings() {
   const queryClient = useQueryClient()

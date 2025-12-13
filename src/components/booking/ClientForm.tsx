@@ -26,7 +26,7 @@ interface ClientFormProps {
 }
 
 export function ClientForm({
-  professionalId,
+  professionalId: _professionalId,
   serviceId,
   dateTime,
   onSuccess,

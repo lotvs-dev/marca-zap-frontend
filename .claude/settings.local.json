@@ -5,7 +5,8 @@
       "Bash(git commit:*)",
       "Bash(tree:*)",
       "Bash(npx reactbits@latest add:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": []

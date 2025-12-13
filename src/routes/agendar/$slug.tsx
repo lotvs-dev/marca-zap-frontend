@@ -1,14 +1,16 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useQuery } from '@tanstack/react-query'
+import type { ProfessionalPublic } from '@/types'
+import { useState } from 'react'
+
 import { api } from '@/lib/api'
-import { ProfessionalPublic } from '@/types'
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { ServiceSelector } from '@/components/booking/ServiceSelector'
 import { AvailabilityCalendar } from '@/components/booking/AvailabilityCalendar'
 import { ClientForm } from '@/components/booking/ClientForm'
 import { BookingConfirmation } from '@/components/booking/BookingConfirmation'
-import { useState } from 'react'
 
 export const Route = createFileRoute('/agendar/$slug')({
   component: BookingPage,

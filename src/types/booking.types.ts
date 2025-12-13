@@ -1,4 +1,4 @@
-import { Service } from './service.types'
+import type { Service } from './service.types'
 
 export type BookingStatus = 'pending' | 'confirmed' | 'cancelled' | 'completed'
 

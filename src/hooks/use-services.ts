@@ -1,6 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
+import type { Service, CreateServiceData } from '@/types'
+
 import { api } from '@/lib/api'
-import { Service, CreateServiceData } from '@/types'
 
 export function useServices() {
   const queryClient = useQueryClient()

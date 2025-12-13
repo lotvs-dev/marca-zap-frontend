@@ -1,5 +1,5 @@
-import { Service } from './service.types'
-import { Availability } from './availability.types'
+import type { Service } from './service.types'
+import type { Availability } from './availability.types'
 
 export interface Professional {
   id: string

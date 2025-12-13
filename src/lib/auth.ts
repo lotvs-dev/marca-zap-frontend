@@ -1,4 +1,4 @@
-import { User } from '@/types'
+import type { User } from '@/types'
 
 const TOKEN_KEY = 'marcazap_token'
 const USER_KEY = 'marcazap_user'
@@ -30,7 +30,7 @@ export function isAuthenticated(): boolean {
 }
 
 // Mock login (substituir por API real depois)
-export async function mockLogin(email: string, password: string) {
+export async function mockLogin(email: string, _password: string) {
   // Simular delay de rede
   await new Promise(resolve => setTimeout(resolve, 800))
 

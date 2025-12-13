@@ -1,4 +1,5 @@
-import { Service } from '@/types'
+import type { Service } from '@/types'
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Clock, DollarSign } from 'lucide-react'
 

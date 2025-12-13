@@ -1,6 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
+import type { Availability, TimeSlot } from '@/types'
+
 import { api } from '@/lib/api'
-import { Availability, TimeSlot } from '@/types'
 
 export function useAvailability() {
   const queryClient = useQueryClient()

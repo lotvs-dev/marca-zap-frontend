@@ -48,7 +48,7 @@ export function ChatSimulation() {
       
       let currentTime = 0;
 
-      MESSAGES.forEach((msg, index) => {
+      MESSAGES.forEach((msg) => {
         // Show typing indicator before bot messages
         if (msg.isBot) {
             const typingStart = currentTime + (msg.delay - 1000); // Start typing 1s before msg

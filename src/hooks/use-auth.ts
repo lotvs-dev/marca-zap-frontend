@@ -1,8 +1,9 @@
 import { useMutation } from '@tanstack/react-query'
 import { useNavigate } from '@tanstack/react-router'
+import type { LoginCredentials, RegisterData, AuthResponse } from '@/types'
+
 import { api } from '@/lib/api'
 import { setToken, setUser, clearAuth, getUser } from '@/lib/auth'
-import { LoginCredentials, RegisterData, AuthResponse } from '@/types'
 
 export function useAuth() {
   const navigate = useNavigate()

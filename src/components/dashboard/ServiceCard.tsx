@@ -1,9 +1,11 @@
-import { Service } from '@/types'
+import type { Service } from '@/types'
+import { Clock, DollarSign } from 'lucide-react'
+
+import { useServices } from '@/hooks/use-services'
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Clock, DollarSign } from 'lucide-react'
-import { useServices } from '@/hooks/use-services'
 
 interface ServiceCardProps {
   service: Service

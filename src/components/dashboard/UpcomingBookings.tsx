@@ -1,5 +1,7 @@
-import { Booking } from '@/types'
+import type { Booking } from '@/types'
+
 import { formatDateTime } from '@/lib/date-utils'
+
 import { Badge } from '@/components/ui/badge'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 

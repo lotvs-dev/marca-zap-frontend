@@ -16,7 +16,7 @@ interface AvailabilityCalendarProps {
 
 export function AvailabilityCalendar({
   professionalId,
-  serviceId,
+  serviceId: _serviceId,
   onSelect,
   onBack,
 }: AvailabilityCalendarProps) {

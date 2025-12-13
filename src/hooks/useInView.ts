@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState, RefObject } from 'react'
+import type { RefObject } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface UseInViewOptions {
   threshold?: number
@@ -8,10 +9,10 @@ interface UseInViewOptions {
 
 export function useInView<T extends HTMLElement = HTMLDivElement>(
   options: UseInViewOptions = {}
-): [RefObject<T>, boolean] {
+): [RefObject<T | null>, boolean] {
   const { threshold = 0.1, triggerOnce = true, rootMargin = '0px' } = options
 
-  const ref = useRef<T>(null)
+  const ref = useRef<T | null>(null)
   const [isInView, setIsInView] = useState(false)
 
   useEffect(() => {

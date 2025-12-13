@@ -1,6 +1,8 @@
 import { useQuery } from '@tanstack/react-query'
+import type { Booking } from '@/types'
+
 import { api } from '@/lib/api'
-import { Booking } from '@/types'
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { CheckCircle } from 'lucide-react'
