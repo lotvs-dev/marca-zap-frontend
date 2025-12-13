@@ -8,19 +8,19 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    value: 500,
-    suffix: '+',
-    label: 'Profissionais usando',
+    value: 147,
+    suffix: ' milhões',
+    label: 'de brasileiros no WhatsApp',
   },
   {
-    value: 12000,
-    suffix: '+',
-    label: 'Agendamentos processados',
-  },
-  {
-    value: 67,
+    value: 97,
     suffix: '%',
-    label: 'Redução de faltas',
+    label: 'abrem o app todo dia',
+  },
+  {
+    value: 68,
+    suffix: '%',
+    label: 'preferem notificações via WhatsApp',
   },
 ]
 
@@ -30,10 +30,10 @@ export function SocialProof() {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
-            Números que falam por si
+            O Brasil já decidiu
           </h2>
           <p className="text-zinc-600 dark:text-zinc-400">
-            Profissionais de todo Brasil já automatizam com MarcaZap
+            WhatsApp não é o futuro. É o presente. Dados reais de 2025.
           </p>
         </div>
 

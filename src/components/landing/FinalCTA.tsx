@@ -18,11 +18,11 @@ export function FinalCTA() {
 
       <div className="container mx-auto max-w-4xl text-center relative z-10">
         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-zinc-900 dark:text-white leading-tight">
-          Pronto para automatizar seu agendamento?
+          E se você nunca mais precisasse agendar manualmente?
         </h2>
 
         <p className="text-xl md:text-2xl text-zinc-600 dark:text-emerald-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Junte-se a profissionais que economizam horas toda semana com o MarcaZap.
+          Não é magia. É automação bem feita. Comece grátis. Veja acontecer.
         </p>
 
         <div className="flex flex-col items-center gap-6">

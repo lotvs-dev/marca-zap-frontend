@@ -13,21 +13,21 @@ interface ValuePillar {
 const pillars: ValuePillar[] = [
   {
     icon: CheckCircle2,
-    title: 'Agendamento Automático',
-    description: 'Cliente manda "Quero agendar" no WhatsApp. Sistema responde com horários disponíveis e agenda sozinho.',
-    metric: '90% menos mensagens',
+    title: 'Simplesmente funciona',
+    description: 'Seu cliente não baixa app. Não clica em link. Só manda mensagem. O sistema agenda. Confirma. Lembra. Tudo sozinho.',
+    metric: 'Automático de verdade',
   },
   {
     icon: Clock,
-    title: 'Lembretes Inteligentes',
-    description: 'Envia lembrete automático 24h e 2h antes do agendamento. Reduz faltas drasticamente.',
-    metric: '67% menos no-shows',
+    title: 'Menos faltas, mais receita',
+    description: 'No Brasil, 3 em cada 10 pacientes faltam sem avisar. Nossos lembretes automáticos cortam isso pela metade.',
+    metric: '40-70% menos no-shows',
   },
   {
     icon: Smartphone,
-    title: 'Zero Fricção',
-    description: 'Seu cliente não instala nada. Só conversa no app que já usa todo dia. Sem Calendly, sem link externo.',
-    metric: '100% WhatsApp nativo',
+    title: 'WhatsApp. Só isso.',
+    description: '97% dos brasileiros abrem o WhatsApp todo dia. É onde seu cliente está. É onde seu negócio deveria estar.',
+    metric: '147 milhões de usuários',
   },
 ]
 
@@ -37,10 +37,10 @@ export function ValueProposition() {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-4">
-            Por que profissionais escolhem MarcaZap
+            Você trabalha. Nós agendamos.
           </h2>
           <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
-            Automatize agendamentos, reduza faltas e foque no que importa: seu trabalho.
+            Pare de responder a mesma pergunta 50 vezes por dia. Deixe a tecnologia fazer isso.
           </p>
         </div>
 
