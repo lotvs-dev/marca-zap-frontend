@@ -10,7 +10,7 @@ interface ValuePillar {
   metric: string
 }
 
-const pillars: ValuePillar[] = [
+const pillars: Array<ValuePillar> = [
   {
     icon: CheckCircle2,
     title: 'Simplesmente funciona',
@@ -33,18 +33,18 @@ const pillars: ValuePillar[] = [
 
 export function ValueProposition() {
   return (
-    <section id="recursos" className="py-20 px-4 bg-zinc-50 dark:bg-zinc-900/50">
+    <section id="recursos" className="py-12 sm:py-16 md:py-20 px-4 bg-zinc-50 dark:bg-zinc-900/50">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-3 md:mb-4">
             Você trabalha. Nós agendamos.
           </h2>
-          <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
             Pare de responder a mesma pergunta 50 vezes por dia. Deixe a tecnologia fazer isso.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {pillars.map((pillar, index) => (
             <ValueCard key={pillar.title} pillar={pillar} delay={index * 100} />
           ))}
@@ -70,16 +70,16 @@ function ValueCard({ pillar, delay }: { pillar: ValuePillar; delay: number }) {
     >
       <Card className="h-full bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/10">
         <CardHeader>
-          <div className="w-14 h-14 rounded-xl bg-linear-to-br from-emerald-500 to-emerald-600 flex items-center justify-center mb-4 shadow-lg shadow-emerald-500/30">
-            <Icon className="w-7 h-7 text-white" />
+          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-linear-to-br from-emerald-500 to-emerald-600 flex items-center justify-center mb-4 shadow-lg shadow-emerald-500/30">
+            <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
           </div>
-          <CardTitle className="text-xl">{pillar.title}</CardTitle>
+          <CardTitle className="text-lg sm:text-xl">{pillar.title}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <CardDescription className="text-base text-zinc-600 dark:text-zinc-400">
+          <CardDescription className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
             {pillar.description}
           </CardDescription>
-          <Badge className="bg-emerald-100 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 border-emerald-200 dark:border-emerald-800">
+          <Badge className="bg-emerald-100 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 border-emerald-200 dark:border-emerald-800 text-xs sm:text-sm">
             {pillar.metric}
           </Badge>
         </CardContent>
